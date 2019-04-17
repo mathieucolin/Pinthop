@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.mathieu.pinthop.MainActivity"
+    tools:showIn="@layout/app_bar_main"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:id="@+id/message_bienvenue_xml"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="@string/message_bienvenue"
+        android:textSize="@dimen/police_base"
+        android:textColor="@color/couleur_texte_clair"
+        android:layout_weight=".10"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight=".20">
+
+        <TextView
+            android:id="@+id/houblon_xml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/houblon"
+            android:textSize="@dimen/police_base"
+            android:textColor="@color/couleur_texte_clair"
+            android:textStyle="bold|italic"
+            android:layout_weight=".30" />
+
+        <Spinner
+            android:id="@+id/spinner_biere"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg"
+            android:layout_weight=".70">
+        </Spinner>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight=".20">
+
+        <AutoCompleteTextView
+            android:id="@+id/choix_biere_xml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/nom_biere"
+            android:background="@drawable/button_bg"
+            android:visibility="invisible"
+            android:inputType="textAutoComplete"
+            android:textSize="@dimen/police_base" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight=".20">
+        <TextView
+            android:id="@+id/localisation_xml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/localisation"
+            android:textSize="@dimen/police_base"
+            android:textColor="@color/couleur_texte_clair"
+            android:textStyle="bold|italic"
+            android:layout_weight=".30"/>
+
+        <Spinner
+            android:id="@+id/spinner_lieu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg"
+            android:layout_weight=".70">
+        </Spinner>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight=".20">
+        <TextView
+            android:id="@+id/type_xml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/type_soiree"
+            android:textSize="@dimen/police_base"
+            android:textColor="@color/couleur_texte_clair"
+            android:textStyle="bold|italic"
+            android:layout_weight=".30" />
+
+        <Spinner
+            android:id="@+id/spinner_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg"
+            android:layout_weight=".70">
+        </Spinner>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/go_beer_xml"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_bg"
+        android:gravity="center"
+        android:text="@string/go_beer"
+        android:textColor="@color/colorPrimary"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_weight=".10"/>
+</LinearLayout>

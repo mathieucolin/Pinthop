@@ -1,0 +1,806 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/ajoutBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ajouter un bar"
+            android:textStyle="bold"
+            android:textSize="@dimen/police_base"
+            android:layout_gravity="center_horizontal" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/nom_bar_ajout_xml"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".50"
+                android:background="@drawable/shape"
+                android:hint="Nom du bar"
+                android:gravity="center"/>
+
+            <AutoCompleteTextView
+                android:id="@+id/adresse_bar_ajout_xml"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape"
+                android:drawableLeft="@drawable/places_ic_search"
+                android:layout_weight=".50"
+                android:completionThreshold="3"
+                android:hint="Adresse du bar"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/style_bar_ajout_xml"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".50"
+                android:background="@drawable/shape"
+                android:hint="Style du bar"
+                android:gravity="center"/>
+
+            <EditText
+                android:id="@+id/style_bar_ajout2_xml"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".50"
+                android:background="@drawable/shape"
+                android:hint="Style du bar"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/style_bar_ajout3_xml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape"
+            android:hint="Style du bar"
+            android:gravity="center"/>
+
+        <Switch
+            android:id="@+id/switch_terrasse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Terrasse ?"/>
+
+        <TextView
+            android:id="@+id/text_switch_terrasse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Switch button terrasse" />
+
+        <Switch
+            android:id="@+id/switch_sportif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sportif ?"/>
+        <TextView
+            android:id="@+id/text_switch_sportif"
+            android:layout_width="wrap_content"
+            android:layout_weight=".25"
+            android:layout_height="wrap_content"
+            android:text="Switch button sportif" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bouton_ouverture_lundi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg"
+                android:layout_weight=".40"
+                android:onClick="onButtonClicked"
+                android:text="Lundi ouverture" />
+
+            <TextView
+                android:id="@+id/ouverture_lundi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".10"/>
+
+            <Button
+                android:id="@+id/bouton_fermeture_lundi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg"
+                android:layout_weight=".40"
+                android:onClick="onButtonClicked"
+                android:text="Lundi fermeture"/>
+
+            <TextView
+                android:id="@+id/fermeture_lundi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".10"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bouton_ouverture_mardi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg"
+                android:layout_weight=".40"
+                android:onClick="onButtonClicked"
+                android:text="Mardi ouverture" />
+
+            <TextView
+                android:id="@+id/ouverture_mardi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".10"/>
+
+            <Button
+                android:id="@+id/bouton_fermeture_mardi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg"
+                android:layout_weight=".40"
+                android:onClick="onButtonClicked"
+                android:text="Mardi fermeture"/>
+
+            <TextView
+                android:id="@+id/fermeture_mardi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".10"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bouton_ouverture_mercredi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg"
+                android:layout_weight=".40"
+                android:onClick="onButtonClicked"
+                android:text="Mercredi ouverture" />
+
+            <TextView
+                android:id="@+id/ouverture_mercredi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".10"/>
+
+            <Button
+                android:id="@+id/bouton_fermeture_mercredi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg"
+                android:layout_weight=".40"
+                android:onClick="onButtonClicked"
+                android:text="Mercredi fermeture"/>
+
+            <TextView
+                android:id="@+id/fermeture_mercredi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".10"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bouton_ouverture_jeudi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg"
+                android:layout_weight=".40"
+                android:onClick="onButtonClicked"
+                android:text="Jeudi ouverture" />
+
+            <TextView
+                android:id="@+id/ouverture_jeudi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".10"/>
+
+            <Button
+                android:id="@+id/bouton_fermeture_jeudi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg"
+                android:layout_weight=".40"
+                android:onClick="onButtonClicked"
+                android:text="Jeudi fermeture"/>
+
+            <TextView
+                android:id="@+id/fermeture_jeudi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".10"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bouton_ouverture_vendredi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg"
+                android:layout_weight=".40"
+                android:onClick="onButtonClicked"
+                android:text="Vendredi ouverture" />
+
+            <TextView
+                android:id="@+id/ouverture_vendredi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".10"/>
+
+            <Button
+                android:id="@+id/bouton_fermeture_vendredi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg"
+                android:layout_weight=".40"
+                android:onClick="onButtonClicked"
+                android:text="Vendredi fermeture"/>
+
+            <TextView
+                android:id="@+id/fermeture_vendredi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".10"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bouton_ouverture_samedi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg"
+                android:layout_weight=".40"
+                android:onClick="onButtonClicked"
+                android:text="Samedi ouverture" />
+
+            <TextView
+                android:id="@+id/ouverture_samedi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".10"/>
+
+            <Button
+                android:id="@+id/bouton_fermeture_samedi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg"
+                android:layout_weight=".40"
+                android:onClick="onButtonClicked"
+                android:text="Samedi fermeture"/>
+
+            <TextView
+                android:id="@+id/fermeture_samedi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".10"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bouton_ouverture_dimanche"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg"
+                android:layout_weight=".40"
+                android:onClick="onButtonClicked"
+                android:text="Dimanche ouverture" />
+
+            <TextView
+                android:id="@+id/ouverture_dimanche"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".10"/>
+
+            <Button
+                android:id="@+id/bouton_fermeture_dimanche"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg"
+                android:layout_weight=".40"
+                android:onClick="onButtonClicked"
+                android:text="Dimanche fermeture"/>
+
+            <TextView
+                android:id="@+id/fermeture_dimanche"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".10"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bouton_happy_hours_debut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg"
+                android:layout_weight=".40"
+                android:onClick="onButtonClicked"
+                android:text="Début Happy Hours" />
+
+            <TextView
+                android:id="@+id/happy_hours_debut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".10"/>
+
+            <Button
+                android:id="@+id/bouton_happy_hours_fin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg"
+                android:layout_weight=".40"
+                android:onClick="onButtonClicked"
+                android:text="Fin Happy Hours"/>
+
+            <TextView
+                android:id="@+id/happy_hours_fin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".10"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layouthh"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bouton_debuthh_mardi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_bg"
+                    android:layout_weight=".40"
+                    android:onClick="onButtonClicked"
+                    android:text="Mardi début HH" />
+
+                <TextView
+                    android:id="@+id/debuthh_mardi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".10"/>
+
+                <Button
+                    android:id="@+id/bouton_finhh_mardi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_bg"
+                    android:layout_weight=".40"
+                    android:onClick="onButtonClicked"
+                    android:text="Mardi fin HH"/>
+
+                <TextView
+                    android:id="@+id/finhh_mardi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".10"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bouton_debuthh_mercredi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_bg"
+                    android:layout_weight=".40"
+                    android:onClick="onButtonClicked"
+                    android:text="Mercredi début HH" />
+
+                <TextView
+                    android:id="@+id/debuthh_mercredi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".10"/>
+
+                <Button
+                    android:id="@+id/bouton_finhh_mercredi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_bg"
+                    android:layout_weight=".40"
+                    android:onClick="onButtonClicked"
+                    android:text="Mercredi fin HH"/>
+
+                <TextView
+                    android:id="@+id/finhh_mercredi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".10"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bouton_debuthh_jeudi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_bg"
+                    android:layout_weight=".40"
+                    android:onClick="onButtonClicked"
+                    android:text="Jeudi début HH" />
+
+                <TextView
+                    android:id="@+id/debuthh_jeudi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".10"/>
+
+                <Button
+                    android:id="@+id/bouton_finhh_jeudi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_bg"
+                    android:layout_weight=".40"
+                    android:onClick="onButtonClicked"
+                    android:text="Jeudi fin HH"/>
+
+                <TextView
+                    android:id="@+id/finhh_jeudi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".10"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bouton_debuthh_vendredi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_bg"
+                    android:layout_weight=".40"
+                    android:onClick="onButtonClicked"
+                    android:text="Vendredi début HH" />
+
+                <TextView
+                    android:id="@+id/debuthh_vendredi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".10"/>
+
+                <Button
+                    android:id="@+id/bouton_finhh_vendredi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_bg"
+                    android:layout_weight=".40"
+                    android:onClick="onButtonClicked"
+                    android:text="Vendredi fin HH"/>
+
+                <TextView
+                    android:id="@+id/finhh_vendredi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".10"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bouton_debuthh_samedi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_bg"
+                    android:layout_weight=".40"
+                    android:onClick="onButtonClicked"
+                    android:text="Samedi début HH" />
+
+                <TextView
+                    android:id="@+id/debuthh_samedi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".10"/>
+
+                <Button
+                    android:id="@+id/bouton_finhh_samedi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_bg"
+                    android:layout_weight=".40"
+                    android:onClick="onButtonClicked"
+                    android:text="Samedi fin HH"/>
+
+                <TextView
+                    android:id="@+id/finhh_samedi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".10"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bouton_debuthh_dimanche"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_bg"
+                    android:layout_weight=".40"
+                    android:onClick="onButtonClicked"
+                    android:text="Dimanche début HH" />
+
+                <TextView
+                    android:id="@+id/debuthh_dimanche"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".10"/>
+
+                <Button
+                    android:id="@+id/bouton_finhh_dimanche"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_bg"
+                    android:layout_weight=".40"
+                    android:onClick="onButtonClicked"
+                    android:text="Dimanche fin HH"/>
+
+                <TextView
+                    android:id="@+id/finhh_dimanche"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".10"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+
+                android:id="@+id/ajouter_infos_xml"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg"
+                android:layout_gravity="center"
+                android:text="Ajouter"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/exception_hh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg"
+                android:layout_gravity="center"
+                android:text="Exception HH"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Ajouter une bière à un bar"
+            android:textStyle="bold"
+            android:textSize="@dimen/police_base"
+            android:layout_gravity="center_horizontal"/>
+
+        <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal">
+
+            <AutoCompleteTextView
+                android:id="@+id/choix_biere_ajout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".50"
+                android:hint="Choisir la bière à ajouter"
+                android:background="@drawable/button_bg"
+                android:inputType="textAutoComplete"
+                android:textSize="@dimen/police_base" />
+
+            <AutoCompleteTextView
+                android:id="@+id/choix_bar_ajout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".50"
+                android:hint="Choisir le bar à ajouter"
+                android:background="@drawable/button_bg"
+                android:inputType="textAutoComplete"
+                android:textSize="@dimen/police_base" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        
+            <EditText
+                android:id="@+id/prix_hors_happy_hours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".50"
+                android:hint="Prix hors happy hours"
+                android:background="@drawable/button_bg"
+                android:inputType="numberDecimal"
+                android:textSize="@dimen/police_base"/>
+
+            <EditText
+                android:id="@+id/prix_happy_hours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".50"
+                android:hint="Prix happy hours"
+                android:background="@drawable/button_bg"
+                android:inputType="numberDecimal"
+                android:textSize="@dimen/police_base"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Switch
+                android:id="@+id/switch_conditionnement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".50"
+                android:text="Conditionnement ?"/>
+
+            <TextView
+                android:id="@+id/text_switch_conditionnement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".50"
+                android:text="Switch button conditionnement" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/ajouter_biere_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg"
+            android:layout_gravity="center"
+            android:text="Ajouter la bière"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Modifier un bar"
+            android:textStyle="bold"
+            android:textSize="@dimen/police_base"
+            android:layout_gravity="center_horizontal"/>
+
+        <AutoCompleteTextView
+            android:id="@+id/choix_bar_modifier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".50"
+            android:hint="Choisir le bar à modifier"
+            android:background="@drawable/button_bg"
+            android:inputType="textAutoComplete"
+            android:textSize="@dimen/police_base" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/recup_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg"
+                android:layout_gravity="center"
+                android:text="Récupérer les infos d'un bar"
+                android:layout_weight=".50"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/modifier_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg"
+                android:layout_gravity="center"
+                android:text="Modifier le bar"
+                android:layout_weight=".50"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
